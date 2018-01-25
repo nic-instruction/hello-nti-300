@@ -11,5 +11,6 @@ echo -e "Here are the steps I took to update this file \n
 8) git fetch \n
 9) git pull \n
 10) I edited newfile2.sh
-11) git commit -m /"added useful content to newfile2.sh/" \n
-12) git push"
+11) git add newfile2.sh
+12) git commit -m /"added useful content to newfile2.sh/" \n
+13) git push"
