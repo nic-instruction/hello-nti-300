@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo -e "<html> \n<h1> Welcome, NTI-300 </h1> \n<h2> yay, I'm having so much fun with linux</h2> <p> it's $(date) and all is well </p>\n</html>" > /var/www/html/index.html
