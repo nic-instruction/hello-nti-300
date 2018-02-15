@@ -1,0 +1,50 @@
+
+# install the python package manager
+ yum install python-pip
+
+# install virtualenv using pip
+ pip install virtualenv
+
+# upgrade pip to current version
+ pip install --upgrade pip
+
+# create a directory from which to run your django server and
+# cd into that dir
+ mkdir /opt/django
+ cd /opt/django
+
+# we're running python version 2 but we want 3 
+ python --version
+ yum install epel-release
+ yum install python34 python-pip
+# we'll run python3 in our virtualenv
+ virtualenv -p python3 django
+ cd django
+ ls
+ source bin/activate
+ 
+# Now our version is python 3!  Yay.
+ python --version
+
+# This server should run as a user, not root.  
+# I'm chowning it to my user, you should chown it to yours
+# Or to ec2-user if you're on the cloud
+
+ chown -R nicolebade django
+ ls -l
+ 
+# Now we should install django
+ pip install django
+ django-admin --version
+
+# And create our first django project
+ django-admin startproject project1
+
+# then we exit to our normal user (your login or ec2-user) and
+# start the django test server
+ su - nicolebade
+ /opt/django/project1/manage.py runserver 0.0.0.0:8000&
+ yum install git
+
+# Now, we have to open the firewall to port 8000!
+# This is easier on AWS is than google cloud
