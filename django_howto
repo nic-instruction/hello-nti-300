@@ -33,12 +33,6 @@ yum install python-pip
 # Now our version is python 3!  Yay.
  python --version
 
-# This server should run as a user, not root.  
-# I'm chowning it to my user, you should chown it to yours
-# Or to ec2-user if you're on the cloud
-
- chown -R nicolebade django
- ls -l
  
 # Now we should install django
  pip install django
@@ -46,6 +40,13 @@ yum install python-pip
 
 # And create our first django project
  django-admin startproject project1
+
+# This server should run as a user, not root.  
+# I'm chowning it to my user, you should chown it to yours
+# Or to ec2-user if you're on the cloud
+
+ chown -R nicolebade django
+ ls -l
 
 # then we exit to our normal user (your login or ec2-user) and
 # start the django test server
