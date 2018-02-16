@@ -1,6 +1,13 @@
 
-# install the python package manager
+# install the python package manager  if you're on gcloud, then use:
  yum install python-pip
+ 
+# if you're on aws use:
+yum install wget
+cd /tmp
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install ./epel-release-latest-7.noarch.rpm
+yum install python-pip
 
 # install virtualenv using pip
  pip install virtualenv
