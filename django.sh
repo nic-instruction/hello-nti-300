@@ -1,7 +1,6 @@
-  
 #!/bin/bash
 yum clean all
-yum -y install python-pip   
+yum install -y python-pip   
 pip install virtualenv  
 pip install --upgrade pip       
 mkdir ~/newproject    
